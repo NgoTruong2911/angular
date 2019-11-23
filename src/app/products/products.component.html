@@ -1,0 +1,29 @@
+<section class="news">
+    <h2>Product</h2>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let product of products">
+        <div class="card">
+          <img src="https://dummyimage.com/400x400/000/fff&text=news" class="card-img-top"
+            alt="https://dummyimage.com/400x400/000/fff&text=news">
+          <div class="card-body">
+            <h5 class="card-title">Tên: {{product.name}}</h5>
+            <h5 class="card-title">Giá : {{product.price}}</h5>
+            <p class="card-text">{{product.desc}}</p>
+            <a href="#" class="btn btn-primary">Buy</a>
+            <input type="text" [(ngModel)]="product.name" class="form-control mt-3" />
+            <button class="text-danger" type="submit" (click)="onDelete(product.id)">Delete</button>
+            <button class="text-danger" type="submit" routerLink="/product/{{product.id}}">Detail</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  
+    <h2>Day la chi tiet san pham</h2>
+    <div *ngIf="selectedProduct">
+      <div>{{selectedProduct.name}}</div>
+      <div>{{selectedProduct.price}}</div>
+      <div>{{selectedProduct.desc}}</div>
+    </div>
+  
+  </section>
