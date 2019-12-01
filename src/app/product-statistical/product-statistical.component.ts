@@ -24,5 +24,4 @@ export class ProductStatisticalComponent implements OnInit {
   DetailProduct(product){
     this.selectedProduct = product;
   }
-
 }

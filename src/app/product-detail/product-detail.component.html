@@ -1,3 +1,8 @@
-<div>
-    asdfghjkl
+<!-- <div *ngIf="selectedProduct">
+        <app-product-detail [data]="selectedProduct"></app-product-detail>
+</div> -->
+<div *ngIf ="product">
+    <div>
+        <p>{{product.name}}</p>
+    </div>
 </div>

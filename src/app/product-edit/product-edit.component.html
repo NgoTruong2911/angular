@@ -1,0 +1,9 @@
+<div *ngIf ="product">
+    <form action="">
+        <div class="form-group">
+            <label for="nameProduct">Name</label>
+            <input type="email" class="form-control" [(ngModel)]="product.name" name="product-name" id="nameProduct" placeholder="Enter name">
+        </div>
+        <button type="submit" (click)="saveProduct(product)" class="btn btn-primary">Save</button>
+    </form>
+</div>

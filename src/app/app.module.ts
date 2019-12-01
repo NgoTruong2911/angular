@@ -9,10 +9,11 @@ import { ProductComponent } from './product/product.component';
 import { ProductStatisticalComponent } from './product-statistical/product-statistical.component';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { AddProductComponent } from './add-product/add-product.component';
 import { HompageComponent } from './hompage/hompage.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,9 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
     ProductComponent,
     ProductStatisticalComponent,
     ProductDetailComponent,
-    AddProductComponent,
     HompageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ProductAddComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,

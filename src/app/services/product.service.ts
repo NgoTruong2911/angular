@@ -18,6 +18,15 @@ export class ProductService {
   onDelete(id):Observable<Product>{
     return this.http.delete<Product>(`${this.products}/${id}`);
   }
+  addProduct(product):Observable<Product>{
+    return this.http.post<Product>(`${this.products}`,product);
+  }
+  getProduct(id):Observable<Product>{
+    return this.http.get<Product>(`${this.products}/${id}`);
+  }
+  updateProduct(product):Observable<Product>{
+    return this.http.put<Product>(`${this.products}/${product.id}`,product);
+  }
   // onDelete(id):Product[]{
   //   return this.products = this.products.filter(item => item.id != id);
   // }
